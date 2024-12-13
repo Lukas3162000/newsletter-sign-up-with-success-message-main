@@ -1,0 +1,70 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+html,body{
+    font-family: 'Roboto';
+    font-size: 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+
+    background-color: grey;
+}
+
+.Card{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    padding: 32px;
+    border-radius: 48px;
+}
+
+.content{
+    color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+}
+
+.content h1{
+    font-size: 78px;
+    margin-bottom: 34px;
+}
+
+.content p {
+    font-size: 22px;
+    margin-bottom: 34px;
+}
+
+.content ul{
+    margin-bottom: 34px;
+    padding-left: 24px;
+}
+
+.content ul li{
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+.content form{
+    display: flex;
+    flex-direction: column;
+}
