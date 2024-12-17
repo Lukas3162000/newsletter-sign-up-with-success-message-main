@@ -7,6 +7,8 @@
 }
 
 :root{
+    --Tomato: hsl(4,100%,67%);
+    --Tomato2: hsla(4,100%,67%,50%);
     --DarkSlateGrey: hsl(234, 29%, 20%);
     --CharcoalGrey: hsl(235, 18%, 26%);
     --Grey: hsl(231, 7%, 60%);
@@ -58,6 +60,7 @@ html,body{
 .content ul{
     margin-bottom: 34px;
     padding-left: 24px;
+    list-style-image: url('assets/images/icon-list.svg');
 }
 
 .content ul li{
@@ -75,6 +78,44 @@ html,body{
     color: var(--CharcoalGrey);
     margin-bottom: 1rem;
 }
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*Display ändern wenn Error true*/
+#validation{
+    font-size: 1rem;
+    margin: 0;
+    display: none;
+    font-weight: 700;
+    color: var(--Tomato);
+}
+
+/* Fehler ID bei False input, ID ändern im HTML element bei fehler*/
+#EmailFail{
+    height: 74px;
+    margin-bottom: 32px;
+    border-radius: 10px;
+    border: 1px solid  #D06A66;
+    background-color: #FFE8E6;
+
+    padding-left: 32px;
+    font-size: 1.375rem;
+    font-family: 'Roboto';
+    color: var(--Tomato);
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.MailInfos{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 #Email{
     height: 74px;
@@ -102,10 +143,20 @@ font-family: 'Roboto';
 #SubButton{
     cursor: pointer;
     height: 74px;
-    background-color: var(--DarkSlateGrey);
+    background: var(--DarkSlateGrey);
     color: var(--White);
     border: none;
     border-radius: 10px;
     font-weight: 700;
     font-size: 22px;
+    transition: 
+        background 1.5s ease,
+        box-shadow 0.5s ease,
+        transform 0.5s ease;
+}
+
+#SubButton:hover{
+    background: linear-gradient(to right,#fe5377,#fe6839);
+    box-shadow: 5px 15px 20px var(--Tomato2);
+    transform: scale(1.01);
 }
