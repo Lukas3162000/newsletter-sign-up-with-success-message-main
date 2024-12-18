@@ -22,13 +22,13 @@
         <li>  And much more!</li>
       </ul>
 
-      <form action="XYZ" method="get"> 
+      <form method="get" id="emailForm"> 
         <div class="MailInfos">
           <label for="Email">Email address</label>
           <p id="validation">Valid email required</p>
         </div>
-        <input type="email" id="Email" name="Mail" placeholder="email@company.com" required>
-        <input type="submit" id="SubButton" value="Subscribe to monthly newsletter">
+        <input type="text" id="Email" class="Email" name="Mail" placeholder="email@company.com" required>
+        <input type="submit" class="SubButton" value="Subscribe to monthly newsletter">
       </form>
     </div>
 
@@ -37,8 +37,16 @@
   </div>
 
 
+  <!-- Success-Card -->
+
+  <div class="SmallCard">
+    <img src="assets\images\icon-success.svg" alt="Success Icon">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <strong>XYZ@EMAIL.de</strong>. Please open it and click the button inside to confirm your subscription.</p>
+    <button class="SubButton" id="DismissButton">Dismiss message</button>
+  </div>
+
   
 <script src="app.js"></script>
-
 </body>
 </html>
