@@ -6,6 +6,16 @@ const form = document.getElementById('emailForm');
 const emailInput = document.getElementById('Email');
 const errorMessage =  document.getElementById('validation');
 
+
+const MailText = document.getElementById('MailText');
+const SmallCard = document.querySelector('.SmallCard');
+const Card = document.querySelector(".Card");
+
+const DismissButton = document.getElementById("DismissButton");
+DismissButton.addEventListener('click',()=>{
+    return form.submit();
+});
+
 form.addEventListener("submit", (e) =>{
     console.log("Submit ausgeführt");
     e.preventDefault();
@@ -27,8 +37,14 @@ form.addEventListener("submit", (e) =>{
         emailInput.classList.add("Email");
         errorMessage.style.display = "none";
 
-        console.log("Formular wurde abgesendet mit E-Mail: " +emailValue);
-        form.submit();
+        SmallCard.style.display = 'block';
+        Card.style.display = 'none';
+        MailText.textContent = emailValue;
+
+        setTimeout(()=>{
+            console.log("Formular wurde abgesendet mit E-Mail: " +emailValue);
+            form.submit();
+        }, 5000);
     }
 });
 

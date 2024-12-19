@@ -81,19 +81,15 @@ html,body{
 
 
 
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-/*Display ändern wenn Error true*/
 #validation{
     font-size: 1rem;
     margin: 0;
-    display: none; /*Setting ändern*/
+    display: none; 
     font-weight: 700;
     color: var(--Tomato);
 }
 
-/* Fehler ID bei False input, ID ändern im HTML element bei fehler*/
+
 .EmailFail{
     height: 74px;
     margin-bottom: 32px;
@@ -108,7 +104,6 @@ html,body{
 }
 
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .MailInfos{
     display: flex;
@@ -161,6 +156,7 @@ font-family: 'Roboto';
     transform: scale(1.01);
 }
 
+/*Notification Card or SmallCard*/
 
 .SmallCard{
     background-color: var(--White);
@@ -169,6 +165,7 @@ font-family: 'Roboto';
     padding-top: 48px;
     color: var(--DarkSlateGrey);
     max-width: 400px;
+    display: none;
 }
 
 .SmallCard img{
@@ -183,9 +180,25 @@ font-family: 'Roboto';
 .SmallCard p{
     margin-bottom: 48px;
     font-size: 1rem;
+    line-height: 150%;
 }
 
 #DismissButton{
 width: 100%;
 }
 
+@media (max-width: 970px){
+    html,body{
+        background-color: var(--White);
+    }
+    .Card{
+        flex-direction: column;
+    }
+
+    .Card img{
+        max-height: 400px;
+        object-fit: cover;
+        height: auto;
+    }
+
+}
