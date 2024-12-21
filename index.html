@@ -31,9 +31,23 @@
         <input type="submit" class="SubButton" value="Subscribe to monthly newsletter">
       </form>
     </div>
+    <div class="ImgContainer">
+        <img class="image" src="assets\images\Frame.png" alt="picture">
+        <script>
+          function updateImageSource(){
+            const img = document.querySelector('.image');
+            if(window.innerWidth <= 969) {
+              img.src = 'assets/images/illustration-sign-up-mobile.svg';
+            } else {
+              img.src = 'assets/images/illustration-sign-up-desktop.svg';
+            }
+          }
 
-
-      <img src="assets\images\Frame.png" alt="picture">
+          window.addEventListener('load', updateImageSource);
+          window.addEventListener('resize', updateImageSource);
+        </script>
+    </div>
+      
   </div>
 
 

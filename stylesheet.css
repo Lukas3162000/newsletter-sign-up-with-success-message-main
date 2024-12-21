@@ -37,6 +37,7 @@ html,body{
     background-color: var(--White);
     padding: 32px;
     border-radius: 48px;
+    
 }
 
 .content{
@@ -156,6 +157,22 @@ font-family: 'Roboto';
     transform: scale(1.01);
 }
 
+.ImgContainer{
+    display: flex;
+    width: 100%;                /* Volle Breite des Containers */
+    overflow: hidden;  
+}
+
+img{
+}
+
+.image{
+    width: 100%;                /* Bild passt sich der Breite an */
+    height: 100%;               /* Bild passt sich der Höhe des Containers an */
+    object-fit: cover;
+    border-radius: 50px;
+}
+
 /*Notification Card or SmallCard*/
 
 .SmallCard{
@@ -196,9 +213,19 @@ width: 100%;
     }
 
     .Card img{
-        max-height: 400px;
+        max-height: 300px;
         object-fit: cover;
         height: auto;
+        order: 1;
+    }
+
+    .Card .content{
+        order: 2;
+    }
+
+    .image{
+        border-radius: 0px 0px 50px 50px;
+        width: 100%;
     }
 
 }
